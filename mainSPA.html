@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"myToDoList"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Templates -->
+    <template id="loginTemplate">
+        <div class="form">
+            <h1>Welcome to Your To Do List</h1>
+            <h3>Log in now</h3>
+            <form id="loginForm">
+                <div>
+                    <label for="loginUsername">Username:</label>
+                    <input class="formInput" type="text" id="loginUsername" required>
+                
+                    <label for="loginPassword">Password:</label><br>
+                    <input class="formInput" type="password" id="loginPassword" required>
+                </div>
+
+                <button type="submit">Login</button>
+                <h2 id="errorMessageLogin"></h2>
+            </form>
+
+            <a href="#register">Don't have an account? Sign up here</a>
+        </div>
+    </template>
+
+    <template id="registerTemplate">
+        <div class="form">
+            <h1>Sign up now to strat managing your To Do list.</h1>
+            <form id="registerForm">
+                <div>
+                    <label for="fullName">Full name</label>
+                    <input class="formInput" type="text" id="fullName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input class="formInput" type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input class="formInput" type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <small>Use at least 6 characters and include at least one number.</small>
+                    <input class="formInput" type="password" id="password" required>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm password</label>
+                    <input class="formInput" type="password" id="confirmPassword" required>
+                </div>
+                <br><br>
+                <label>
+                    <input type="checkbox" required>
+                    I agree to the membership terms and conditions.
+                </label>
+
+                <button type="submit">submit</button>
+                <div id="errorMessage"></div>
+            </form>
+
+            <a href="#login">Back to Login</a>
+
+        </div>
+    </template>
+
+    <template id="mainPageTemplate">
+        <div>
+            <h2>Your To Do list:</h2>
+            <input class="formInput" type="text" id="taskInput" placeholder="Add a task">
+            <button id="addTaskButton">add</button>
+
+            <h3>To Do:</h3>
+            <ul id="taskList"></ul>
+
+            <h3>Done:</h3>
+            <ul id="completedList"></ul>
+        </div>
+        <div class="errorMessage"></div>
+
+    </template>
+
+    <a onclick=logout(event) href="#">Log Out</a>
+
+    <!-- Main Content -->
+    <div id="app"></div>
+
+    <script src="./logout.js"></script>
+    <script type="module" src="./fajax.js"></script>
+    <script type="module" src="./server.js"></script>
+    <script type="module" src="./database.js"></script>
+    <script type="module" src="./taskRenderer.js"></script>
+    <script type="module" src="./router.js"></script>
+    
+</body>
+
+</html>

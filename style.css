@@ -1,0 +1,211 @@
+/* כל הדף */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* לוודא שהדף יתפוס את כל גובה המסך */
+    flex-direction: column;
+    text-align: center;
+}
+
+/* הטופס של ההתחברות וההרשמה */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form{
+    
+    padding: 5%;
+    border-radius: 5%;
+    background-color: #c4e1fe;
+    
+}
+
+label, small {
+    display: block;
+    font-weight: bold;
+}
+
+
+/* שדות קלט */
+.formInput{
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* כפתור שליחה */
+button {
+    width: 25%;
+    padding: 12px;
+    background-color: #007acc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* קישורים */
+a {
+    color: #007acc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* כאשר יש שגיאה */
+#errorMessage,
+#errorMessageLogin {
+    color: red;
+    font-size: 14px;
+}
+
+/* הסתרת אלמנטים כשתוכן הדף מוכן */
+#errorMessage,
+#errorMessageLogin {
+    display: none;
+}
+
+/* עיצוב הכותרות */
+h1, h2, h3 {
+    color: #333;
+}
+
+/* מיקום של כל התוכן */
+#app {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* רשימות משימות */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+}
+
+/* פריסה של המשימות בגלריה */
+#taskList, #completedList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr)); /* שלוש בעמודה */
+    gap: 20px; /* רווחים בין המשימות */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* עיצוב של משימה ריבועית */
+li.task-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--task-color, #fff);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    transition: transform 0.2s, opacity 0.3s;
+    text-align: center;
+    min-height: 140px;
+    word-wrap: break-word;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* הנפשה קטנה כשמרחפים על משימה */
+li.task-item:hover {
+    transform: scale(1.07);
+}
+
+/* צבעי פסטל לכל משימה */
+li.task-item:nth-child(5n+1) { --task-color: #FFB6B9; } /* ורוד פסטל */
+li.task-item:nth-child(5n+2) { --task-color: #A2D5C6; } /* טורקיז פסטל */
+li.task-item:nth-child(5n+3) { --task-color: #F8E9A1; } /* צהוב פסטל */
+li.task-item:nth-child(5n+4) { --task-color: #C9B6E4; } /* סגול פסטל */
+li.task-item:nth-child(5n+5) { --task-color: #A1C6EA; } /* כחול פסטל */
+
+/* עיצוב משימה שהושלמה */
+li.task-done {
+    background-color: #b0b0b0 !important;
+    color: white;
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+
+/* כפתורים */
+button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* כפתור מחיקה */
+.delete-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d63030;
+}
+
+/* כפתור השלמת משימה */
+.complete-btn {
+    background-color: #3cb371;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.complete-btn:hover {
+    background-color: #2e8b57;
+}
+
+/* כפתור הוספת משימה */
+#addTaskButton {
+    background-color: #007acc;
+    color: white;
+    padding: 12px;
+}
+
+#addTaskButton:hover {
+    background-color: #005f99;
+}
