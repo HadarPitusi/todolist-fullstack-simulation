@@ -22,7 +22,4 @@ This project was developed as part of a Full-Stack Web Development course. It si
 - Asynchronous server response simulation with unstable communication (delays, dropped requests)
 - Two separate simulated servers – one for users and one for tasks
 
----
-
-## 📁 Project Structure
 
